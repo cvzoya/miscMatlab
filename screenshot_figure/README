@@ -1,0 +1,9 @@
+In your matlab code, whenever you generate a plot/figure that you would like to capture a full screen snapshot of, insert a call to 'saveFigFromScreen' and pass as an argument the path you wish the figure to be saved to along with the filename. 'saveFigFromScreen' calls 'capture_screen', which has been written by Tomasz Malisiewics. Add both 'saveFigFromScreen.m' and 'capture_screen.m' to your matlab path.
+
+Example usage:
+data = rand(1,10);
+fig = figure(); hold on;
+plot(data);
+saveFigFromScreen('sampleFilename')
+close(fig);
+ 
