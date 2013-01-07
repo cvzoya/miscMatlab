@@ -1,0 +1,16 @@
+C = plotConfusion(trueLabels,estLabels,names,color,ordering)
+% generate a rotatable 3-dimensional confusion matrix; the z entry of the
+% (i,j) cell is the percent of labels i that were labelled j
+% also return the computed confusion matrix C (as a 2D matrix); 
+
+See sample image generated: confMatrix.eps
+
+% input variables:
+% trueLabels: an integer array of the ground truth labels
+% estLabels: an integer array of the estimated labels
+% names: (opt) a cell of label names; if this is emitted, the labels will
+%        be assigned numerical names (in the plot, along the axes)
+% color: (opt) a matlab colormap; default: 'hot'
+% ordering: (opt) an array of integers that specifies the order in which to
+% arrange the labels; default: confusion matrix is ordered in terms of
+% decreasing diagonal entry (presumed to be maximal visibility)
