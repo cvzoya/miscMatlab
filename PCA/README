@@ -1,0 +1,18 @@
+[evecs,mean,evals] = mypca(X):
+% Compute PCA dimensionality reduction on data matrix X, where each column
+% is a data point, and each row represents a variable. The transpose trick
+% is used to reduce computation in case the number of data points is less
+% than the number of variables. Returned are the eigenvectors ('evecs'), 
+% eigenvalues ('evals'), and the 'mean' taken over all the datapoints, 
+% used for mean-centering the data.
+
+[evecs,mean,coeffs,evals] = mydimred(X,type,num):
+% Compute PCA dimensionality reduction on data matrix X, where each column
+% is a data point, and each row represents a variable. 
+% If type == 1, return the top num eigenvectors ('evecs') and eigenvalues
+% ('evals') computed, and project X onto this basis of eigenvectors.
+% If type == 2, return the eigenvectors that account for the top num% of
+% the total variance in the data, and project X onto this basis. Also
+% return the 'mean' taken over all the datapoints, used for mean-centering 
+% the data. 'coeffs' is the projection of X onto the eigenbasis.
+
