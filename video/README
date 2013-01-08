@@ -1,0 +1,8 @@
+vidToVecImages(indir,outdir,k,ext,togray)
+% Takes as input a directory of videos (indir), a frame rate k, an
+% output directory (outdir), a video extention (e.g. 'mpg','mov',etc.);
+% vectorizes every k^th frame of each video (if togray = 0, then all 3 
+% color channels are separately saved; otherwise, images are grayscaled
+% before being vectorized). The vectorized images are then put into a data
+% matrix allData which gets saved in a mat file with the same name as the 
+% input video.
