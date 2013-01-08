@@ -6,3 +6,6 @@ vidToVecImages(indir,outdir,k,ext,togray)
 % before being vectorized). The vectorized images are then put into a data
 % matrix allData which gets saved in a mat file with the same name as the 
 % input video.
+
+This file calls readVideo, which is based on code from:
+http://www.mathworks.com/help/matlab/ref/videoreaderclass.html
