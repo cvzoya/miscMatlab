@@ -7,5 +7,5 @@ vidToVecImages(indir,outdir,k,ext,togray)
 % matrix allData which gets saved in a mat file with the same name as the 
 % input video.
 
-This file calls readVideo, which is based on code from:
+This file calls readVideo, which is based on code taken from the bottom of this page:
 http://www.mathworks.com/help/matlab/ref/videoreaderclass.html
