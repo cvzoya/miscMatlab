@@ -1,0 +1,307 @@
+/** Import Reset CSS **/
+
+@import url("reset.css");
+
+/** Import Google fonts **/
+
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("http://fonts.googleapis.com/css?family=Archivo+Narrow");
+
+/** Global Styles **/
+
+html
+{
+	height: 100%;
+	overflow: auto;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body
+{
+	font-family: "Source Sans Pro", Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #DDD;
+	padding: 0 0 25px 0;
+	background: #222 url("../images/bg.png") repeat;
+}
+
+::selection { background: #F33; color: #FFF; }
+::-moz-selection { background: #F33; color: #FFF; }
+
+a { color: #F33; text-decoration: none; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+a:hover { color: #FFF; }
+
+/** Layout Styles **/
+
+#fixedtop
+{
+	position: fixed;
+	width: 100%;
+	min-width: 240px;
+	height: 160px;
+	top: 0;
+	background: #EEE url("../images/bg-fixedtop.png") repeat;
+	color: #444;
+	z-index: 1000;
+	
+	text-shadow: 1px 1px 1px #FFF;
+	
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0px 0px 10px #000;
+}
+
+	#fixedtop #headercont
+	{
+		width: 80%;
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	
+		#fixedtop #headercont #headerleft
+		{
+			float: left;
+			width: 125px;
+		}
+		
+			#fixedtop #headercont #headerleft a img
+			{
+				width: 125px;
+				margin: 15px 0 0 0;
+
+				-webkit-transition: all 0.2s linear;
+				-moz-transition: all 0.2s linear;
+				-o-transition: all 0.2s linear;
+				transition: all 0.2s linear;
+			}
+			
+			#fixedtop #headercont #headerleft a:hover img
+			{
+				opacity: 0.6;
+			}
+		
+		#fixedtop #headercont #headerright
+		{
+			float: right;
+		}
+		
+			/** Menu **/
+			
+				#fixedtop #headercont #headerright .menu select
+				{
+					display: none;
+					font-family: inherit;
+				}
+				
+					@media (max-width: 768px)
+				 {
+						#fixedtop #headercont #headerright .menu ul
+						{
+							display: none;
+						}
+						
+						#fixedtop #headercont #headerright .menu select
+						{
+							display: inline-block;
+							width: 100%;
+							text-transform: none;
+							font-family: inherit;
+						}
+					}
+					
+				#fixedtop #headercont #headerright ul
+				{
+					float: right;
+					margin: 80px 15px 0 0;
+				}
+			
+					#fixedtop #headercont #headerright ul li
+					{
+						display: inline;
+					}
+					
+						#fixedtop #headercont #headerright ul li a
+						{
+							float: left;
+							line-height: 40px;
+							padding: 0 12px;
+							font-weight: 400;
+							font-size: 16px;
+							text-decoration: none;
+							color: #333;
+							text-transform: uppercase;
+							font-family: "Archivo Narrow", Arial, Helvetica, sans-serif;
+						}
+						
+							#fixedtop #headercont #headerright ul li a:hover, #fixedtop #headercont #headerright ul li.active a
+							{
+								color: #F33;
+							}
+
+#maincont
+{
+	width: 100%;
+	min-width: 240px;
+	margin-top: 160px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+	#maincont #main
+	{
+		width: 80%;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 25px 0 0 0;
+		line-height: 22px;
+	}
+	
+		#maincont #main p { margin: 0 0 20px 0; }
+		#maincont #main h1, #maincont #main h2, #maincont #main h3, #maincont #main h4, #maincont #main h5 { margin: 0 0 20px 0; color: #FFF; font-weight: normal; font-family: "Archivo Narrow", Arial, Helvetica, sans-serif; }
+		#maincont #main h1 { font-size: 30px; line-height: 30px; }
+		#maincont #main h2 { font-size: 28px; line-height: 28px; }
+		#maincont #main h3 { font-size: 26px; line-height: 26px; }
+		#maincont #main h4 { font-size: 24px; line-height: 24px; }
+		#maincont #main h5 { font-size: 22px; line-height: 22px; }
+		#maincont #main ul { margin: 0 0 15px 35px; list-style-type: square; }
+		#maincont #main ul li { padding: 0 0 0 2px; }
+		#maincont #main ol { margin: 0 0 15px 35px; list-style-type: decimal; }
+		#maincont #main ol li { padding: 0 0 0 2px; }
+		#maincont #main hr { clear: both; border: 0; height: 0; margin: 0 0 20px 0; border-top: 1px solid #000; border-bottom: 1px solid #222; }
+		#maincont #main blockquote { background: #151515; border-left: 3px solid #E2761C; padding: 15px; margin: 0 0 15px 0; }
+
+		/** Portfolio Styles **/
+
+		#maincont #main #portfoliocont ul
+		{
+			list-style-type: none;
+			margin: 0 0 25px 0;
+		}
+		
+			#maincont #main #portfoliocont ul li
+			{
+				display: block;
+				margin: 0 0 10px 0;
+			}
+			
+				#maincont #main #portfoliocont ul li a
+				{
+					position: relative;
+					float: left;
+					width: 23%;
+					margin: 0 1% 15px 1%;
+				}
+				
+					#maincont #main #portfoliocont ul li a img
+					{
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+
+						#maincont #main #portfoliocont a .overlay
+						{
+							position: absolute;
+							height: 100%;
+							left: 0;
+							opacity: 0;
+							top: 0;
+							width: 100%;
+							z-index: 40;
+							
+							-webkit-transition: all 0.1s linear;
+							-moz-transition: all 0.1s linear;
+							-o-transition: all 0.1s linear;
+							transition: all 0.1s linear;
+						}
+						
+							#maincont #main #portfoliocont a .overlay.link
+							{
+								background: url("../images/overlay_link.png") no-repeat scroll center center, url("../images/overlay_bg.png") repeat scroll center center transparent;
+								display: inline-block;
+							}
+							
+								#maincont #main #portfoliocont a .overlay:hover
+								{
+									opacity: 1;
+								}
+								
+	/** Footer **/
+			
+	#maincont #footercont
+	{
+		width: 80%;
+		max-width: 980px;
+		margin: 0 auto;
+		color: #777;
+		line-height: 22px;
+		font-size: 12px;
+		text-align: left;
+		text-shadow: 1px 1px 1px #000;
+	}
+
+
+/** Responsive Magic **/
+
+@media screen and (max-width: 768px)
+{
+	
+	#fixedtop #headercont
+	{
+		text-align: center;
+	}
+	
+		#fixedtop #headercont #headerleft
+		{
+			float: none;
+			width: 100%;
+		}
+		
+			#fixedtop #headercont #headerleft a img
+			{
+				width: 100px;
+				margin: 15px 0 10px 0;
+			}
+		
+		#fixedtop #headercont #headerright
+		{
+			float: none;
+			width: 100%;
+		}
+	
+	#maincont #main
+	{
+		text-align: center;
+	}
+	
+	#maincont #main #portfoliocont ul li a
+	{
+		width: 31.3%;
+		margin-bottom: 10px;
+	}
+	
+	#maincont #footercont
+	{
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 480px)
+{		
+	
+	#maincont #main #portfoliocont ul li a
+	{
+		width: 48%;
+		margin-bottom: 6px;
+	}
+	
+	#maincont #footercont
+	{
+		text-align: center;
+	}
+	
+}
+
