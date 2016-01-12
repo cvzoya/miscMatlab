@@ -1,5 +1,6 @@
 % This function can be used for calculating Gist image neighbors in order
 % to look for (partial) image duplicates, for instance.
+% Install: http://labelme2.csail.mit.edu/Release3.0/browserTools/php/matlab_toolbox.php
 
 imdir = 'Targets/tower/';
 imfiles = dir(fullfile(imdir,'*.jpg'));
